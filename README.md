@@ -1,5 +1,5 @@
 # Syslog Server
-Syslog Server is a python based server module used for syslogging of events. It is an integral part of Intrusion Detection System project & will be log authorization & autheuntication events, which will be used to train the expert system.
+Syslog Server is a python based server module used for syslogging of events. It is an integral part of Intrusion Detection System project & will be log authorization & authentication events, which will be used to train the expert system.
 
 
 ### Getting Started
