@@ -21,4 +21,9 @@ The below command will start the syslog server :
 ```bash
 $ python main.py
 ```
-You can configure host, tcp_port, udp_port & log file location by changing them in main.py 
+
+To configure host, tcp_port, udp_port & log file location :
+  
+```bash
+$ python main.py host_name tcp_port udp_port log_file
+```

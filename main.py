@@ -17,6 +17,7 @@
 """
 
 from syslogserver import syslogServer
+import sys
 
 """
 * Executes Syslog Server
@@ -27,5 +28,28 @@ from syslogserver import syslogServer
 # syslogServer(host, tcp_port, udp_port, log_file)
 # object initialized with default param 
 
-server = syslogServer()      
+host = '127.0.0.1'
+tcp_port = 1525
+udp_port = 1514
+log_file = 'audit.log'
+
+if len(sys.argv)==5 :
+    host = sys.argv[1]
+    tcp_port = int(sys.argv[2])
+    udp_port = int(sys.argv[3])
+    log_file = sys.argv[4]
+
+elif len(sys.argv)==4 :
+    host = sys.argv[1]
+    tcp_port = int(sys.argv[2])
+    udp_port = int(sys.argv[3])
+
+elif len(sys.argv)==3 :
+    host = sys.argv[1]
+    port = int(sys.argv[2])
+
+elif len(sys.argv)==2 :
+    host = sys.argv[1]
+
+server = syslogServer(host,tcp_port, udp_port, log_file)      
 server.start()
